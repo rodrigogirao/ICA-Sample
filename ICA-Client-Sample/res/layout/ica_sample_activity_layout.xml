@@ -1,82 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
-    <TextView
-        android:id="@+id/tamanhoTela"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/resolucaoTelaLabel"
-        android:layout_below="@+id/tamanhoTelaLabel"/>
-
-    <TextView
-        android:id="@+id/resolucaoTelaLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/pegarInformacoes"
-        android:layout_below="@+id/tamanhoTela"
-        android:text="Resolução da Tela"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/resolucaoTela"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/resolucaoTelaLabel"
-        android:layout_below="@+id/resolucaoTelaLabel"/>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/resolucaoTela"
-        android:layout_below="@+id/resolucaoTela"
-        android:text="Memoria Ram Disponivel"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/memoriaRamDisponivel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"/>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/pegarInformacoes"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="42dp"
-        android:onClick="receiveImage"
-        android:text="Receber Imagem" />
-
-    <RelativeLayout
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" />
-
-    <Button
-        android:id="@+id/pegarInformacoes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignLeft="@+id/imageView1"
-        android:onClick="onClickButton"
-        android:text="Pegar Informações do dispositivo" />
-
-    <TextView
-        android:id="@+id/tamanhoTelaLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tamanhoTela"
-        android:layout_alignParentTop="true"
-        android:text="Tamanho da Tela"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-</RelativeLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/gridview"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:columnWidth="90dp"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+    android:background="@android:color/black"
+/>
