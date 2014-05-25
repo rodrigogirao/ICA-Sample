@@ -10,14 +10,12 @@ import br.com.rolesoft.ica_server.webservice.ImageAdapter;
 
 @Path("/image")
 public class ImageAdapterWS {
-	int width;
-	int height;
 	
 	@POST	@Path("/{numOfImages}/{imagesIds}")
 	@Consumes("application/json")
 	@Produces("application/json")
 	public String sendImage(String json, @PathParam("numOfImages") int numOfImages, 
 			@PathParam("imagesIds") String imagesIds){
-		return ImageAdapter.getImage(json, numOfImages, imagesIds, "/home/rodrigo/workspace/web/ImageCloudAdapterServer-Prototype/WebContent/images/");
+		return ImageAdapter.getImage(json, numOfImages, imagesIds, "/home/rodrigo/Pictures/");
 	}
 }
