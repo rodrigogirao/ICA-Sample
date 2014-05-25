@@ -27,7 +27,7 @@ public class GridAdapter extends BaseAdapter{
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return 1;
+		return 12;
 	}
 
 	@Override
@@ -44,32 +44,19 @@ public class GridAdapter extends BaseAdapter{
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-//		ImageView imageView = new ImageView(context);
-//		if (images.size() > position)
-//			imageView.setImageBitmap(images.get(position));
-//		imageView.setBackgroundColor(Color.GREEN);
-//		Log.wtf("so vejo ele", "passou dentro do getview");
-//		return imageView;
 		ImageView imageView;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
             imageView = new ImageView(context);
-            imageView.setLayoutParams(new GridView.LayoutParams(1200, 1000));
-            imageView.setScaleType(ScaleType.CENTER_INSIDE);
-//            imageView.setPadding(8, 8, 8, 8);
+            imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
+            imageView.setScaleType(ScaleType.FIT_XY);
         } else {
             imageView = (ImageView) convertView;
         }
         
-        if (images.size() <= position) {
-        	//notifyDataSetChanged();
-        	Log.wtf("a", "notify");
-        }
-        else {
-			imageView.setImageBitmap(images.get(position));
-			Log.wtf("a", "set image bitmap");
-        }
+        if(images.get(position) != null)
+        	imageView.setImageBitmap(images.get(position));
 
-       // imageView.setBackgroundColor(Color.GREEN);
+        imageView.setBackgroundColor(Color.GREEN);
         return imageView;
 
 	}
