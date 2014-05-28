@@ -29,14 +29,20 @@ public class ICASampleActivity extends Activity{
 	}
 	
 	public void receiveImage() {
-		String[] imagesIds = new String[6];
-		imagesIds[0] = "once_upon_a_time_by_daekazu-d5fsvt4.jpg";
-		imagesIds[1] = "Green_Arrow.jpg";
-		imagesIds[2] = "the-avengers-wallpaper-for-android-74.jpg";
-		imagesIds[3] = "android_robot-3333px.png";
-		imagesIds[4] = "229831_366439080111342_1397920206_n.jpg";
-		imagesIds[5] = "1381807_633478526672776_1304819446_n.jpg";
-		new ReceiveImageTask(images, this, "http://192.168.1.12:8080/ICA-Server-Sample/image/", imagesIds, imagesIds.length).execute();
+		String[] imagesIds = new String[12];
+		imagesIds[0] = "01.jpg";
+		imagesIds[1] = "02.jpg";
+		imagesIds[2] = "03.jpg";
+		imagesIds[3] = "04.png";
+		imagesIds[4] = "05.jpg";
+		imagesIds[5] = "06.jpg";
+		imagesIds[6] = "07.jpg";
+		imagesIds[7] = "08.jpg";
+		imagesIds[8] = "09.jpg";
+		imagesIds[9] = "10.jpg";
+		imagesIds[10] = "11.jpg";
+		imagesIds[11] = "12.jpg";
+		new ReceiveImageTask(images, this, "http://ica.rolesoft.com.br:8080/ICA-Server-Sample/image/", imagesIds, imagesIds.length).execute();
 		new LoadViewTask().execute();
 	}
 	
