@@ -24,6 +24,8 @@ public class GridAdapter extends BaseAdapter{
 		this.images = images;
 	}
 	
+
+	
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
@@ -47,8 +49,10 @@ public class GridAdapter extends BaseAdapter{
 		ImageView imageView;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
             imageView = new ImageView(context);
-            imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
+            imageView.setLayoutParams(new GridView.LayoutParams(250, 175));
             imageView.setScaleType(ScaleType.FIT_XY);
+            imageView.setPadding(8, 8, 8, 8);
+
         } else {
             imageView = (ImageView) convertView;
         }
@@ -56,7 +60,7 @@ public class GridAdapter extends BaseAdapter{
         if(images.get(position) != null)
         	imageView.setImageBitmap(images.get(position));
 
-        imageView.setBackgroundColor(Color.GREEN);
+        //imageView.setBackgroundColor(Color.GREEN);
         return imageView;
 
 	}

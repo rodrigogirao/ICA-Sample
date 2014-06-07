@@ -16,6 +16,6 @@ public class ImageAdapterWS {
 	@Produces("application/json")
 	public String sendImage(String json, @PathParam("numOfImages") int numOfImages, 
 			@PathParam("imagesIds") String imagesIds){
-		return ImageAdapter.getImage(json, numOfImages, imagesIds, "/home/rodrigo/Pictures/");
+		return ImageAdapter.getImage(json, numOfImages, imagesIds, "/home/ubuntu/Pictures/");
 	}
 }

@@ -33,7 +33,7 @@ public class ICASampleActivity extends Activity{
 		imagesIds[0] = "01.jpg";
 		imagesIds[1] = "02.jpg";
 		imagesIds[2] = "03.jpg";
-		imagesIds[3] = "04.png";
+		imagesIds[3] = "04.jpg";
 		imagesIds[4] = "05.jpg";
 		imagesIds[5] = "06.jpg";
 		imagesIds[6] = "07.jpg";
